@@ -25,7 +25,7 @@ A quantidade específica de memória flash determina se o uso dessa memória se 
 ###  **Oque São:**
 É uma região da memória física de um computador utilizada para armazenar dados temporariamente, tendo como finalidade manter as informações salvas antes de serem efetivamente usadas.
 
-### ***Como Funciona:**
+### **Como Funciona:**
 Armazena dados temporariamente na memória RAM para melhorar o sempenho do computador e agilizar a reprodução.
 É ativada pelo sistema quando há uma diferença entre a taxa de recebimento e processamento de dados ou, alguns caso, quando elas são variáveis.
 
