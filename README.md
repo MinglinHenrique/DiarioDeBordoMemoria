@@ -1,5 +1,24 @@
 # Diario de Bordo Memória
 
+## Cache da CPU
+
+###  **Oque São:**
+é um cache de hardware usado pela CPU para reduzir o custo médio (tempo ou energia) de acesso a dados da memória principal.
+
+Um cache é uma memória menor e mais rápida, localizada mais perto de um núcleo de processador , que armazena cópias dos dados de locais de memória principal frequentemente usados , evitando a necessidade de sempre consultar a memória principal, cujo acesso pode ser dezenas ou centenas de vezes mais lento.
+
+A maioria das CPUs possui uma hierarquia de múltiplos níveis de cache (L1, L2, frequentemente L3 e raramente até mesmo L4), com caches específicos para instruções (cache I) e caches específicos para dados (cache D) separados no nível 1.
+
+Os diferentes níveis são implementados em diferentes áreas do chip; o L1 está localizado o mais próximo possível de um núcleo da CPU e, portanto, oferece a maior velocidade devido aos curtos caminhos de sinal, mas requer um projeto cuidadoso. Os caches L2 são fisicamente separados da CPU e operam mais lentamente, mas impõem menos exigências ao projetista do chip e podem ser muito maiores sem impactar o projeto da CPU. Os caches L3 são geralmente compartilhados entre múltiplos núcleos da CPU.
+
+[fonte](https://en.wikipedia.org/wiki/CPU_cache)
+
+### **Como Funciona:**
+
+Os dados são transferidos entre a memória e o cache em blocos de tamanho fixo, chamados linhas de cache ou blocos de cache . Quando uma linha de cache é copiada da memória para o cache, uma entrada de cache é criada. A entrada de cache incluirá os dados copiados, bem como a localização de memória solicitada (chamada de tag).
+
+Quando o processador precisa ler ou escrever em um endereço de memória, ele primeiro verifica se existe uma entrada correspondente no cache. O cache verifica o conteúdo do endereço de memória solicitado em quaisquer linhas de cache que possam conter esse endereço. Se o processador encontrar o endereço de memória no cache, ocorreu um acerto de cache . No entanto, se o processador não encontrar o endereço de memória no cache, ocorreu uma falha de cache . No caso de um acerto de cache, o processador lê ou escreve imediatamente os dados na linha de cache. Para uma falha de cache, o cache aloca uma nova entrada e copia os dados da memória principal; em seguida, a solicitação é atendida com o conteúdo do cache.
+
 ## Memória Flash
 
 ### **Oque é:**
