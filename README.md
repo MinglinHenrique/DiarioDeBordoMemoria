@@ -32,3 +32,5 @@ Armazena dados temporariamente na memória RAM para melhorar o sempenho do compu
 Por exemplo, ao reproduzir um arquivo de áudio/vídeo pela internet, os primeiros 20% são carregados na memória buffer. Enquanto essa porcentagem está sendo reproduzida, o computador baixa o restante do arquivo e o armazena novamente no buffer. Assim, se houver um congestionamento na rede, as chances de ocorrer travamentos são menores, já que a reprodução não depende diretamente da internet.
 
 Pode aprimorar o desempenho do computador no disco rígido e placa de vídeo, em acesso eficiente aos dados ou sendo carregados antes de serem exibidos.
+
+[fonte](https://tecnoblog.net/responde/o-que-e-buffer/)
