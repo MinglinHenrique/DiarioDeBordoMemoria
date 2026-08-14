@@ -1,5 +1,21 @@
 # Diario de Bordo Memória
 
+## Disco Rígido
+
+### **Oque São:**
+É um dispositivo de armazenamento de dados eletromecânico que armazena e recupera dados digitais usando armazenamento magnético e um ou mais pratos rígidos de rotação rápida revestidos com material magnético.
+Os pratos são emparelhados com cabeças magnéticas, geralmente dispostas em um braço atuador móvel, que lê e grava dados nas superfícies dos pratos. Os dados são acessados de maneira aleatória, o que significa que blocos individuais de dados podem ser armazenados e recuperados em qualquer ordem. Os HDDs são um tipo de armazenamento não volátil, retendo os dados armazenados mesmo quando desligados.
+
+### **Como Funciona:**
+
+Um HDD moderno grava dados magnetizando um filme fino de material ferromagnético. em ambos os lados de um disco. Mudanças sequenciais na diretação da magnetização representavam bits de dados binátios. Os dados são lidos do disco detectando as transições na magnetização. Os dados do usuário são codificados usando um esquema de codificação, como codificação limitada por comprimento de execução, que determina como os dados são representados pelas transições magnéticas.
+
+Um projeto de HDD típico consiste em um fuso que contém discos circulares planos, chamados de pratos, que armazenam os dados gravados. Os pratos são feitos de um material não magnético, geralmente liga de alumínio, vidro ou cerâmica. Eles são revestidos com uma camada rasa de material magnético tipicamente de 10 a 20 nm de profundidade, com uma camada externa de carbono para proteção. Para referência, um pedaço de papel de cópia padrão tem 0,07-0,18 mm (70.000-180.000 nm) de espessura.
+
+As informações são gravadas e lidas em um prato à medida que ele gira em torno de dispositivos chamados cabeças de leitura e gravação que são posicionadas para operar muito perto da superfície magnética, com sua altura de vôo geralmente na faixa de dezenas de nanômetros. A cabeça de leitura e gravação é usada para detectar e modificar a magnetização do material que passa imediatamente sob ela.
+
+[fonte](https://pt.wikipedia.org/wiki/Unidade_de_disco_r%C3%ADgido)
+
 ## Cache da CPU
 
 ###  **Oque São:**
