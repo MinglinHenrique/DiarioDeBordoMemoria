@@ -35,6 +35,24 @@ Os dados são transferidos entre a memória e o cache em blocos de tamanho fixo,
 
 Quando o processador precisa ler ou escrever em um endereço de memória, ele primeiro verifica se existe uma entrada correspondente no cache. O cache verifica o conteúdo do endereço de memória solicitado em quaisquer linhas de cache que possam conter esse endereço. Se o processador encontrar o endereço de memória no cache, ocorreu um acerto de cache . No entanto, se o processador não encontrar o endereço de memória no cache, ocorreu uma falha de cache . No caso de um acerto de cache, o processador lê ou escreve imediatamente os dados na linha de cache. Para uma falha de cache, o cache aloca uma nova entrada e copia os dados da memória principal; em seguida, a solicitação é atendida com o conteúdo do cache.
 
+## Registradores de memória da CPU
+
+### **Oque são?**
+O registrador de uma UCP (unidade central de processamento) é a memória dentro da própria CPU que armazena bits.
+Os registradores estão no topo da hierarquia de memória, sendo assim, é um tipo de memória mais rápida e financeiramente mais custosa. Apesar do alto custo por bit armazenado, sua velocidade de acesso é essencial para o funcionamento dos computadores modernos e, portanto, são incluídos, ainda que em menor capacidade, mesmo em processadores de baixo custo.
+os registradores são circuitos digitais capazes de armazenar e deslocar informações binárias, e são tipicamente usados como um dispositivo de armazenamento temporário.
+
+Nos dias de hoje os computadores necessitam de muito mais espaço para armazenar as informações em todos os tipos de memória, a partir desse momento, as informações que são armazenadas por conjuntos de dígitos binários nos sistemas digitais internos do computador também tem que ser maior, ocupando um espaço de 32, 64 ou 128 bits, sendo que em períodos mais antigos essa memória dos conjuntos de dígitos binários possuíam no máximo 16 bits.
+
+Os sistemas digitais necessitam de comunicação com a parte de hardware do computador, para que seja armazenado nos conjuntos de dígitos binários.
+Dentro dos sistemas digitais temos os circuitos digitais capazes de realizar o armazenamento de informações sendo eles os registradores.
+
+### **Como Funciona:**
+São utilizados na execução de programas de computadores, disponibilizando um local para armazenar dados. Na maioria dos computadores modernos, quando da execução das instruções de um programa, os dados são deslocados da memória principal para todos os registradores.
+as instruções que utilizam estes dados são executadas pelo processador e, finalmente, os dados são movidos de volta para a memória principal.
+
+[fonte](https://pt.wikipedia.org/wiki/Registrador_(inform%C3%A1tica))
+
 ## Memória Flash
 
 ### **Oque é:**
