@@ -51,9 +51,9 @@ As instruções que utilizam estes dados são executadas pelo processador e, fin
 
 ### **Oque é:**
 É um tipo de memória não volátil que mantém o armazenamento mesmo sem uma fonte de energia.
-Permite regravações e exclusões de blocos de dados em nível de byte.
+Permite escrita e leitura em nível de byte, mas a exclusão (apagamento) de dados só pode ser feita em blocos inteiros — essa é justamente a característica que distingue a memória flash de outras EEPROMs.
 São amplamente utilizados e armazenam dados para finalidades muito específicas.
-Atualmente assume algumas das funções anteriormente reservadas aos discos rígidos. Por exemplo, ao ligar um computador, ele executa a BIOS.
+Atualmente assume algumas das funções anteriormente reservadas às EEPROMs e memórias ROM. Por exemplo, ao ligar um computador, a BIOS/UEFI hoje é armazenada e executada a partir de um chip de memória flash na placa-mãe.
 
 ### **Como Funciona:**
 A memória flash armazena dados em células de memória flash baseadas em transistores de porta flutuante. As células de memória dos chips de memória flash são compostas por transistores, que atuam como interruptores de roteamento da corrente elétrica que passa por aquela célula de memória flash.
@@ -65,15 +65,12 @@ Uma delas é a porta de controle, que fica na camada superior do transistor. A o
 Além disso, há uma camada fina de separação entre a porta de controle e a porta flutuante, conhecida como camada de óxido.
 A quantidade específica de memória flash determina se o uso dessa memória se enquadra em uma classificação de baixa, média ou alta densidade. Gravações com densidade mais alta refletem maiores quantidades de memória flash.
 
-## Buffers de instrução
+## Buffer de instruções da CPU
 
-### **Oque São:**
-É uma região da memória física de um computador utilizada para armazenar dados temporariamente, tendo como finalidade manter as informações salvas antes de serem efetivamente usadas.
+### **Oque É:**
+É uma pequena região de memória de altíssima velocidade dentro (ou muito próxima) do núcleo da CPU, usada para armazenar temporariamente as instruções já buscadas na memória, antes de serem decodificadas e executadas. Diferente de um buffer genérico de I/O (como o de streaming de vídeo), esse buffer opera dentro do pipeline de instruções do processador.
 
 ### **Como Funciona:**
-Armazena dados temporariamente na memória RAM para melhorar o desempenho do computador e agilizar a reprodução.
-É ativada pelo sistema quando há uma diferença entre a taxa de recebimento e processamento de dados ou, em alguns casos, quando elas são variáveis.
+Enquanto a CPU executa uma instrução, o estágio de busca (fetch) já adianta a leitura das próximas instruções da memória/cache e as deposita nesse buffer. Isso evita que o núcleo fique ocioso esperando cada instrução chegar da memória a cada ciclo, mantendo o pipeline de execução abastecido continuamente.
 
-Por exemplo, ao reproduzir um arquivo de áudio/vídeo pela internet, os primeiros 20% são carregados na memória buffer. Enquanto essa porcentagem está sendo reproduzida, o computador baixa o restante do arquivo e o armazena novamente no buffer. Assim, se houver um congestionamento na rede, as chances de ocorrer travamentos são menores, já que a reprodução não depende diretamente da internet.
-
-Pode aprimorar o desempenho do computador no disco rígido e placa de vídeo, em acesso eficiente aos dados ou sendo carregados antes de serem exibidos.
+Esse mecanismo é essencial para técnicas como *pipelining* e *pré-busca de instruções* (instruction prefetching): ao manter um estoque de instruções já buscadas, o processador reduz bolhas no pipeline causadas pela latência de acesso à memória principal, aumentando o throughput de execução.
